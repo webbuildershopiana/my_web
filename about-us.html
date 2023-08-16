@@ -10,7 +10,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-   <title></title>
+   <title>MY_WEB</title>
 
 <meta name="description" content=>
 <meta name="generator" content=META_GENERATOR>
@@ -55,7 +55,6 @@
    }
 </script>
 
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:regular&amp;subset=latin&amp;display=swap"/>
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular,700&amp;subset=latin&amp;display=swap"/>
  
@@ -98,7 +97,7 @@
           </ul></li>
          <li class="nav-item"><a href="#" tabindex="-1" aria-disabled="true" class="nav-link disabled">Disabled</a></li>
         </ul>
-        <form method="get" class="d-flex">
+        <form method="get" id="itnbi4" class="d-flex">
          <input type="search" placeholder="Search" aria-label="Search" class="form-control me-2"><button type="submit" class="btn btn-outline-success">Search</button>
         </form>
        </div>
@@ -107,6 +106,13 @@
     </div>
    </div>
   </div>
+  <script>var props = {"itnbi4":{"name":"","target":"_self","method":"POST","url":"https://stgapi.shopiana.in/api/v1/wbWebsite/101/form/formData?store=my_web","emailenable":false}};
+          var ids = Object.keys(props).map(function(id) { return '#'+id }).join(',');
+          var els = document.querySelectorAll(ids);
+          for (var i = 0, len = els.length; i < len; i++) {
+            var el = els[i];
+            (function({name:t,method:e,url:n,emailenable:r}){if(t){const o=this;this.addEventListener("submit",i=>{i.preventDefault();const a=new FormData(o);a.append("emailEnabled",r),a.append("formName",t),fetch(n,{method:e,body:a}).then(t=>{if(t.ok)return t.json();throw new Error("API call failed")}).then(t=>{console.log("API response:",t)}).catch(t=>{console.error("Error during API call:",t)})})}else console.log("somthing went wrong")}.bind(el))(props[el.id]);
+          }</script>
  </body>
 </html>
 </html>
