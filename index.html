@@ -18,11 +18,11 @@
 <!-- Apple Stuff -->
 <meta name="apple-mobile-web-app-capable" content=APPLE_MOBILE_WEB_APP_CAPABLE>
 <meta name="apple-mobile-web-app-status-bar-style" content=APPLE_MOBILE_WEB_APP_STATUS_BAR_STYLE>
-<meta name="apple-mobile-web-app-title" content=APPLE_MOBILE_WEB_APP_TITLE>
+<meta name="apple-mobile-web-app-title" content=APPLE_TITLE>
 
 <!-- Google / Search Engine Tags -->
 <meta itemprop="name" content=Name>
-<meta itemprop="description" content=ITEMPROP_DECRIPTION>
+<meta itemprop="description" content=ITEMPROP_DESCRIPTION>
 <meta itemprop="image" content=ITEMPROP_IMAGE>
 
 <!-- MS Tile - for Microsoft apps-->
@@ -37,8 +37,8 @@
 
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content=TWITTER_CARD>
-<meta name="twitter:title" content=TWITTER_TITLE>
-<meta name="twitter:description" content=TWITTER_DESCRIPTION>
+<meta name="twitter:title" content=Twitter title>
+<meta name="twitter:description" content=Twitter Discription>
 <meta name="twitter:image" content=TWITTER_IMAGE>
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -66,7 +66,7 @@
 
 <style type="text/css">
 
-* { box-sizing: border-box; } body {margin: 0;}#iz1i{background-color:#212f3c;}#iws4x{padding:10px;color:white;background-repeat:no-repeat;background-position:center center;background-attachment:scroll;background-size:contain;background-image:none;}#i04nw{background-repeat:repeat;background-position:left top;background-attachment:scroll;background-size:auto;background-image:linear-gradient(to right, rgba(84,31,255,0.61) 24%, #c42727 91%);height:65px;width:100%;}#idda2{background-repeat:no-repeat;background-position:center center;background-attachment:scroll;background-size:cover;background-image:url('https://dkcut7rvj02cb.cloudfront.net/files/my_web/ASSET/diljit-dosanjh-as-boat-brand-ambassador_810x.jpg');height:400px;width:100%;}#iz64p{background-repeat:repeat;background-position:left top;background-attachment:scroll;background-size:auto;background-image:linear-gradient(blue 0%, blue 100%);height:80px;width:100%;}
+* { box-sizing: border-box; } body {margin: 0;}#iz1i{background-color:#212f3c;}#iws4x{padding:10px;color:white;background-repeat:no-repeat;background-position:center center;background-attachment:scroll;background-size:contain;background-image:none;font-family:Montserrat, sans-serif;}#i04nw{background-repeat:repeat;background-position:left top;background-attachment:scroll;background-size:auto;background-image:linear-gradient(to right, rgba(84,31,255,0.61) 24%, #c42727 91%);height:65px;width:100%;}#iz64p{background-repeat:repeat;background-position:left top;background-attachment:scroll;background-size:auto;background-image:linear-gradient(blue 0%, blue 100%);height:80px;width:100%;}#i5xwp{padding:10px;color:white;background-repeat:no-repeat;background-position:center center;background-attachment:scroll;background-size:contain;background-image:none;font-family:Dancing Script, cursive;}
 
 </style>
 
@@ -75,6 +75,9 @@
  <head></head>
  <body id="iz1i">
   <div id="iws4x">
+   Linear Gradient pluggin&nbsp;
+  </div>
+  <div id="i5xwp">
    Linear Gradient pluggin&nbsp;
   </div>
   <nav id="iu7dd" class="navbar navbar-expand-lg navbar-light border">
@@ -108,55 +111,13 @@
     <div id="i04nw" class="col"></div>
    </div>
   </div>
-  <div id="idda2" class="col"></div>
   <div id="iz64p" class="col"></div>
   <script>var props = {"isj11":{"name":"","target":"_self","method":"POST","url":"https://api.shopiana.in/api/v1/wbWebsite/101/form/formData?store=my_web","emailenable":false}};
           var ids = Object.keys(props).map(function(id) { return '#'+id }).join(',');
           var els = document.querySelectorAll(ids);
           for (var i = 0, len = els.length; i < len; i++) {
             var el = els[i];
-            (function ({ name, target, method, url, emailenable }) {
-        // const submitButton = this.querySelector('[type=submit]'); // Find the submit button
-        if (name) {
-            const form = this;
-            this.addEventListener('submit', (e) => {
-                e.preventDefault(); // Prevent the default form submission
-                // Create a new FormData object
-                const formData = new FormData(form);
-                formData.append('emailEnabled', emailenable);
-                formData.append('formName', name);
-                // Perform an API call using fetch and Promises
-                fetch(url, {
-                    method: method,
-                    // headers: {
-                    //     'Content-Type': 'application/json',
-                    // },
-                    body: formData,
-                })
-                    .then(response => {
-                    if (response.ok) {
-                        // API call successful
-                        return response.json();
-                    }
-                    else {
-                        // API call failed
-                        throw new Error('API call failed');
-                    }
-                })
-                    .then(responseData => {
-                    console.log('API response:', responseData);
-                    // Your custom script logic here
-                })
-                    .catch(error => {
-                    console.error('Error during API call:', error);
-                });
-            });
-            // }
-        }
-        else {
-            console.log('somthing went wrong');
-        }
-    }.bind(el))(props[el.id]);
+            (function({name:t,method:e,url:n,emailenable:r}){if(t){const o=this;this.addEventListener("submit",i=>{i.preventDefault();const a=new FormData(o);a.append("emailEnabled",r),a.append("formName",t),fetch(n,{method:e,body:a}).then(t=>{if(t.ok)return t.json();throw new Error("API call failed")}).then(t=>{console.log("API response:",t)}).catch(t=>{console.error("Error during API call:",t)})})}else console.log("somthing went wrong")}.bind(el))(props[el.id]);
           }</script>
  </body>
 </html>
